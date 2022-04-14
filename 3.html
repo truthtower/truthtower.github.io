@@ -9,21 +9,27 @@
 <body>
    <video src="https://truthtower.coding.net/api/share/download/2a3789b5-4a4d-40b6-a943-90b553378034.mp4" controls='controls' autoplay='autoplay' poster="./images/花纹.gif" height="200" width="300"></video>
 
+</body>
+</html>
+
+<-- 引入 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
   <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
  
+<-- 添加一个容器-->
 <div id="gitalk-container"></div>
  
+<-- 生成 gitalk 插件-->
 var gitalk = new Gitalk({
-  clientID: 'bc6e8cc50cf27e12f5c4'
+  clientID: 'bc6e8cc50cf27e12f5c4', //Client ID
  
-  clientSecret: 'e70085034a2553dbec43e8be523f72405d321390', //Client Secret
+  clientSecret: '951fe7f43f871f01692782ace03933f0c8d533fe', //Client Secret
  
-  repo: 'talk'
-  owner: 'truthtower'
-  admin: ['truthtower']
-  id: location.href
-  distractionFreeMode: false  
+  repo: 'talk',//仓库名称
+  owner: 'truthtower',//仓库拥有者
+  admin: ['truthtower'],
+  id: location.href,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+ 
 gitalk.render('gitalk-container')
-</body>
-</html>
